@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -33,13 +34,14 @@ def generate_blog(paragraph_topic):
     return retrieve_blog
 
 
-working = True
+if __name__ == "__main__":
+    working = True
 
-while working:
-    user = input('Would you like to write a paragraph? Y - Yes, '
-                 'other character - No\n')
-    if user == 'Y':
-        paragraph_topic = input('Type your topic to write a paragraph: \n')
-        print(generate_blog(paragraph_topic))
-    else:
-        working = False
+    while working:
+        user = input('Would you like to write a paragraph? Y - Yes, '
+                     'other character - No\n')
+        if user == 'Y':
+            paragraph_topic = input('Type your topic to write a paragraph: \n')
+            print(generate_blog(paragraph_topic))
+        else:
+            working = False
