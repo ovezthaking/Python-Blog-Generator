@@ -37,7 +37,7 @@ working = True
 
 while working:
     user = input('Would you like to write a paragraph? Y - Yes, '
-                'other character - No\n')
+                 'other character - No\n')
     if user == 'Y':
         paragraph_topic = input('Type your topic to write a paragraph: \n')
         print(generate_blog(paragraph_topic))
