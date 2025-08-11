@@ -33,4 +33,13 @@ def generate_blog(paragraph_topic):
     return retrieve_blog
 
 
-print(generate_blog('Ciekawostki o Pieńsku - Małym mieście na Dolnym Śląsku.'))
+working = True
+
+while working:
+    user = input('Would you like to write a paragraph? Y - Yes, '
+                'other character - No\n')
+    if user == 'Y':
+        paragraph_topic = input('Type your topic to write a paragraph: \n')
+        print(generate_blog(paragraph_topic))
+    else:
+        working = False
